@@ -23,7 +23,15 @@ if (!isset($_POST['btnSeConnecter'])) { /* L'entrée btnSeConnecter est vide = l
     </form>';
 
 } else
+<?php
 
+$nom = "d'Alembert";
+
+echo $nom. " L'insertion de ce nom n'est pas sûre. <br>";
+
+echo addslashes($nom). " L'ajout du caractère d'échappement rend l'insertion sûre.";
+
+?>
 /* L'utilisateur a cliqué sur Se connecter, l'entrée btnSeConnecter <> vide, on traite le formulaire */
 
 {
