@@ -1,0 +1,11 @@
+@baseurl = https://api.spacexdata.com/v3
+### Get Latest Launches
+GET {{baseurl}}/launches/latest
+### Get Upcoming Launches
+GET {{baseurl}}/launches/upcoming
+### Get Cores
+# @name core
+GET {{baseurl}}/cores
+### Get Single Core
+@coreid = {{core.response.body.$[0].core_serial}}
+GET {{baseurl}}/cores/{{coreid}}
