@@ -23,15 +23,6 @@ if (!isset($_POST['btnSeConnecter'])) { /* L'entrée btnSeConnecter est vide = l
     </form>';
 
 } else
-<?php
-
-$nom = "d'Alembert";
-
-echo $nom. " L'insertion de ce nom n'est pas sûre. <br>";
-
-echo addslashes($nom). " L'ajout du caractère d'échappement rend l'insertion sûre.";
-
-?>
 /* L'utilisateur a cliqué sur Se connecter, l'entrée btnSeConnecter <> vide, on traite le formulaire */
 
 {
@@ -69,6 +60,10 @@ echo addslashes($nom). " L'ajout du caractère d'échappement rend l'insertion s
     if ($enregistrement) { // si $enregistrement n'est pas vide = on a trouvé quelque chose -> on est connecté
 
         echo '<h1>Connexion réussie !</h1>';
+        // on regarde d'alembert et on ajoute un caractère d'échappement pour le rendre sûre a la base de donnée
+$nom = "d'Alembert";
+echo $nom. " L'insertion de ce nom n'est pas sûre. <br>";
+echo addslashes($nom). " L'ajout du caractère d'échappement rend l'insertion sûre.";
 
     } else { // La requête n'a pas retournée de résultat, on a pas trouvé de ligne correspondant au mel et mot de passe
 
